@@ -5,7 +5,6 @@ metadata:
   labels:
     app: demo-project-webapi
 spec:
-  progressDeadlineSeconds: 9000
   replicas: 3
   selector:
     matchLabels:
@@ -17,7 +16,7 @@ spec:
     spec:
       containers:
       - name: demo-project-webapi
-        image: appdockerregistery.apzurecr.io/demoproject:latest
+        image: appdockerregistery.azurecr.io/dockerimage:latest
         ports:
         - containerPort: 80
         - containerPort: 443
