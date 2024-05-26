@@ -20,14 +20,14 @@ namespace DemoProject_Service.Data_Service
 			_configuration = configuration;
             _connString = _configuration.GetConnectionString("DefaultConnection");
         }
-        #endregion
+		#endregion
 
-        #region Public Methods
+		#region Public Methods
 		public virtual ApplicationDbContext CreateDbContext()
 		{
 			return new ApplicationDbContext(_connString);
 		}
-        public string GetData()
+		public string GetData()
 		{
 			_ = new SaveReturn();
 			SaveReturn? returnResult;

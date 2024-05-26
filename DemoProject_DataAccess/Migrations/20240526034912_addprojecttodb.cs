@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace DemoProject_DataAccess.Migrations
 {
     /// <inheritdoc />
-    public partial class AddDemotoDB : Migration
+    public partial class addprojecttodb : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)

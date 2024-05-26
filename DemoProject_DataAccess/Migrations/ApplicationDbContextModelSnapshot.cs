@@ -22,7 +22,7 @@ namespace DemoProject_DataAccess.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("DemoProject_Model.Model.DummyData", b =>
+            modelBuilder.Entity("DemoProject_Model.Model.DummyDatas", b =>
                 {
                     b.Property<Guid?>("Id")
                         .ValueGeneratedOnAdd()

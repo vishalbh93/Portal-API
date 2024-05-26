@@ -5,7 +5,7 @@ namespace DemoProject_DataAccess.Data
 {
 	public class ApplicationDbContext : DbContext, IApplicationDbContext
 	{
-        private readonly string _connectionString;
+		private readonly string _connectionString;
 		public ApplicationDbContext()
 		{
 		}
@@ -19,6 +19,7 @@ namespace DemoProject_DataAccess.Data
 		protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 		{
 			optionsBuilder.UseSqlServer(_connectionString);
+			//optionsBuilder.UseSqlServer("Server=tcp:sqlserver2019.database.windows.net,1433;Database=sqlclient;Persist Security Info=False;User ID=vishal;Password=Password@1;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;");
 		}
     }
 }

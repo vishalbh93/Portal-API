@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DemoProject_DataAccess.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20240414095540_AddDemotoDB")]
-    partial class AddDemotoDB
+    [Migration("20240526034912_addprojecttodb")]
+    partial class addprojecttodb
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -25,7 +25,7 @@ namespace DemoProject_DataAccess.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("DemoProject_Model.Model.DummyData", b =>
+            modelBuilder.Entity("DemoProject_Model.Model.DummyDatas", b =>
                 {
                     b.Property<Guid?>("Id")
                         .ValueGeneratedOnAdd()
