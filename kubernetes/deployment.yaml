@@ -1,39 +1,30 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: demo-project-webapi
-  labels:
-    app: demo-project-webapi
+  name: appdockerregistery-deployment
 spec:
-  replicas: 3
+  replicas: 2
   selector:
     matchLabels:
-      app: demo-project-webapi
+      app: appdockerregistery
   template:
     metadata:
       labels:
-        app: demo-project-webapi
+        app: appdockerregistery
     spec:
       containers:
-      - name: demo-project-webapi
+      - name: appdockerregistery
         image: appdockerregistery.azurecr.io/dockerimage:latest
         ports:
         - containerPort: 80
-        - containerPort: 443
 ---
 apiVersion: v1
 kind: Service
 metadata:
-  name: demo-project-webapi-service
+  name: appdockerregistery-service
 spec:
-  selector:
-    app: demo-project-webapi
+  type: LoadBalancer
   ports:
-  - name: http
-    protocol: TCP
-    port: 80
-    targetPort: 80
-  - name: https
-    protocol: TCP
-    port: 443
-    targetPort: 443
+  - port: 80
+  selector:
+    app: appdockerregistery
